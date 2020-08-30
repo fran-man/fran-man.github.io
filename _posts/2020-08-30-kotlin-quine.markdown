@@ -31,7 +31,7 @@ fun main() {
 }
 {% endhighlight %}
 
-Seems simple enough, right. So now we just replace the example strings with the source code of the file itself....
+Seems simple enough, right? So now we just replace the example strings with the source code of the file itself....
 {% highlight kotlin %}
 fun main() {
     val output = listOf("fun main() {",/*What goes here??*/"output.forEach { println(it) }","}")
@@ -47,7 +47,7 @@ It feels like the only way would be to have the quine read it's source file and 
 
 However, I know that this is possible, so it's was clear that we simply need a more novel approach.
 ### An Additional Roadblock
-Something else I became aware of when tinkering with this, was the problem or representing strings within strings. Strings are delimited somehow
+Something else I became aware of when tinkering with this, was the problem of representing strings within strings. Strings are delimited somehow
 e.g. `"` in kotlin. So the "inner" quotes would need to be escaped `\"`. But then, what about when this is in the source code? Well,
 the slash will need to be escaped too! You end up having to escape escape characters, which gets pretty horrible quickly.
 I soon decided that the best way around this was to represent all the strings as byte arrays to get around this, e.g.
@@ -70,7 +70,7 @@ val string = "print(\"Hello world\")"
 {% endhighlight %}
 In a way this whole line has two meanings.
 - A simple string of characters
-- (When interpreted by a compiler) a assign some value to a variable called "string"
+- (When interpreted by a compiler) assign some value to a variable called "string"
 
 So what if we actually used some of our lines of code (specifically, those lines representing a line of source as a string) for TWO things?
 - Print the string *represented* by the line - the actual source
@@ -118,3 +118,22 @@ Give it one final run, and then use your file diff utility of choice to check th
 
 ## Final Code
 The final code can be found [here](https://github.com/fran-man/Kotlin-Quine/blob/master/src/main/kotlin/com/franm/quine/Quine.kt)
+
+## Conclusion
+This was actually a really fun and challenging task to complete. It forced my brain to think in a totally new way
+and tested my knowledge of the language too.
+
+If there is one thing to take away from this, it is that information can have more meaning than that which is immediately present
+on the surface. Sometimes you need to stop and think slightly more deeply about what you are observing to see the true potential
+meaning and applications it may present. It's also a reminder that sometimes, a solution to a problem may not be immediately
+obvious, and may require some ingenuity.
+### Enhancements
+If I ever come back to it, some immediate enhancements/challenges would be:
+- Make the quine shorter
+- See if it is possible to do with string literals rather than byte arrays
+- Try making one in another language for an added challenge (e.g. go, which I have been interested to learn for a while)
+
+### Further Information
+I read a book a while ago ([Gödel, Escher, Bach](https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach)) that touches
+on some of the themes I mention above. It's a great read and really makes you look at the world in a new way.
+I had much of the points from this book in mind when I was working on the above.
