@@ -109,3 +109,25 @@ Well - again not really. The code you can *see* is a lot simpler. But really you
 Spring boot is a *massive* project that I often hear people refer to as being too complex or "magic". So really, this
 activity was more a case of moving your complexity from somewhere you didn't want it (your own code) to somewhere you
 can tolerate it (the framework). Whether this is tolerable and worthwhile for you is a personal decision.
+
+#### Simplifying Some Deliberately Complex Code
+A thought occurred to me, "what about code that you deliberately inserted artificial complexity into?" such as:
+
+    Random r = new Random();
+    
+    int ten = 0;
+    
+    while (ten != 10) {
+        ten = r.nextInt(20);
+    }
+
+Now this is artificially complex - there's a loop and random number generation when really all we need is
+
+    int ten = 10;
+    
+So what gives? Surely we can do this simplification for free? Well, almost, but one could argue that the complexity is
+"converted" into cognitive load as you examine the complex code, figure out what it should be doing, and re-write it.
+Obviously, this is an absurd example and no one in their right mind would argue that the small amount of effort to refactor this
+is not worth it. But still it is worth consideration as an illustrative example.
+
+## Conclusion
