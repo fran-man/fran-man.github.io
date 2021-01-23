@@ -61,3 +61,51 @@ of the fundamental concepts within thermodynamics. In short, energy can never be
 and/or converted from one type to another (e.g. a radiator converts electric energy in the grid into heat energy in your house).
 This is an absolute rule and cannot be violated, hence why perpetual motion machines are an absolute impossibility - if
 they worked, they would be generating energy from nothing.
+
+## Application to Software Engineering
+OK, great. We've talked about entropy and CoE which are try physics concepts, which surely is nothing to do with working as a
+software engineer, right? These are totally unrelated fields after all.
+
+Maybe not, though. At the lowest level, computers are just moving subatomic particles (electrons) around. They also convert
+lots of energy from one type to another, as anyone who has run a computer in a small room will confirm! So, maybe it is not
+such a non-sequitur to jump between these two topics. I'm not saying there's actually a direct causation here, but it's
+an interesting consideration.
+
+Anyway - I've been in many situations where you look back and despair that you were not able to get rid of all the complexity
+from your system. What happened? I started to think that maybe "reducing the complexity" was the wrong goal to aim for.
+My interest and awareness in the topics mentioned above led me to consider another viewpoint:
+
+*Instead of eliminating or reducing complexity, we instead focus on rearraging, moving around, or "converting" the complexity*
+
+This might sound odd but I have considered some examples to illustrate
+
+### Examples
+
+#### Refactoring Functionality into a Class
+We've all experienced code that was written without much planning. We can end up with functions strewn all over the place
+and interlinked, known affectionately as "spaghetti code". This might often be described by the maintainers as "complicated".
+
+Now suppose you roll your sleeves up and write a service class for all the code that's related. This makes it easier to use,
+easier to extend, easier to see the whole picture, and harder to make mistakes. Hooray - complexity reduced! Well, sort of.
+In the real world you may well come across some issues when doing this refactor, that mean you have to add some little bits of complexity
+along the way to keep everything working. You have also created a new class that you now need to consider the usage of
+- Is it a singleton?
+- Does it carry any state?
+- How is it instantiated?
+
+And there is also the *work* that you have done to transform the code from one form into another. But, in general circles, these will all be seen as positives,
+or necessary evils. So, going back to the point above, we have *converted* and *rearranged* the complexity into a form
+that is more agreeable and that we can more easily deal with.
+
+#### Replacing Code With a Framework
+You've written your app from scratch and it has properties that it uses to determine how it runs. You are reading these all from disk,
+having to parse the text, check for errors, and then use the values. Beyond one or two properties this is going to get annoying.
+
+So let's say you decide to use a framework like spring boot for this. Spring handles the wiring of all your properties, checks the types,
+and puts the values where they need to be. It scales up nicely to hundreds of values easily and all you have to do is write a bit of 
+yml - complexity gone!
+
+Well - again not really. The code you can *see* is a lot simpler. But really you've offloaded your complexity to spring boot.
+Spring boot is a *massive* project that I often hear people refer to as being too complex or "magic". So really, this
+activity was more a case of moving your complexity from somewhere you didn't want it (your own code) to somewhere you
+can tolerate it (the framework). Whether this is tolerable and worthwhile for you is a personal decision.
