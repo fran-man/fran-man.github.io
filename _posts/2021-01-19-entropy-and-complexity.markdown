@@ -2,22 +2,23 @@
 layout: post
 title:  "Entropy As A Mental Model Of Complexity"
 date:   2021-01-19 21:00:25 +0000
-categories: update welcome
+categories: update
 ---
 ## Introduction
 In my 9 years as a professional software engineer, I've been in many discussions, some technical, some not so technical,
 that are related to eliminating or reducing complexity. I'm sure many others will have been too.
 
-These discussions are interesting and seem practically very useful, however, it can often seem that no matter
+These discussions are interesting and seem practically very useful. However, it can often seem that no matter
 how much you discuss and plan to reduce complexity, and how much refactoring, simplification etc. you do, that you still
 end up with an over-complicated system.
 
-Because of this and other reasons I observed over the years, something did not sit quite right with me. It wasn't that
+Because of this and other observations I made over the years, something did not sit right with me. It wasn't that
 the never-ending crusade to eliminate complexity was useless - quite the opposite. But there was something in the way it was discussed
-and conceived of that did not seem quite right.
+and conceived of that seemed wrong and sometimes counter-productive.
 
-Over the recent months, a way to articulate this has begun to form in my head to the point where I feel I can put it down in writing.
-We start with a little background around my inspiration, and then move onto how this might be applied in real life.
+Over the recent months, a way to articulate this has begun to form in my head. I'm now at a point where I think I can
+put it down in writing. We start with a little background around my inspiration, and then move onto how this might be
+applied in real life.
 
 ### Disclaimer
 Some of the ideas I refer to below talk about certain concepts from Physics. I feel it necessary to make clear that I am
@@ -38,6 +39,7 @@ This relates to the concept of considering how "spread out" the energy is (e.g. 
 of all its energy at the next instant.* (From Wikipedia).
 
 This then means that a system is statistically inclined to a higher-entropy state where the energy is more spread out.
+This explains why, for example, when left undisturbed, heat will spread evenly throughout a room over time.
 
 Another, more common analogy is that of *disorder*. This considers how disordered the system is, and then considers how many
 combinations of the microstates (states of items such as atoms), would result in the overall macrostate. For example, 
@@ -49,11 +51,12 @@ It should be noted that the model of entropy as being representative of disorder
 However to me, it remains a useful analogy for explain the basic idea.
 
 #### Entropy Is Non-decreasing
-The main point here is that in a closed system, entropy must always stay the same or increase. The immediate retort to this,
-using the pack of cards analogy, might be *"But I can put the cards back in order again, decreasing the entropy"*. And this would be correct.
-But, the deck of cards is not a closed system; the decrease in entropy **must** be offset by an increase elsewhere, for example,
-the mixing of the air in the room due to the shuffling, and the dispersal of heat that you cause by physically moving your hands.
-An immediate response to *this* might well be *"But those things are irrelevant to me!"* - if this is you, hold that thought for later.
+The important point that I want to make, is that in a closed system, entropy must always stay the same or increase.
+The immediate retort to this, using the pack of cards analogy, might be *"But I can put the cards back in order again,
+decreasing the entropy"*. And this would be correct. But, the deck of cards is not a closed system; the decrease in
+entropy **must** be offset by an increase elsewhere, for example, the mixing of the air in the room due to the shuffling,
+and the dispersal of heat that you cause by physically moving your hands. An immediate response to *this* might be
+*"But those things are irrelevant to me!"* - if this is you, hold that thought for later.
 
 ### Conservation of Energy
 As explained by [NASA](https://www.grc.nasa.gov/WWW/K-12/airplane/thermo1f.html), the conservation of energy (CoE), is one
@@ -77,13 +80,16 @@ My interest and awareness in the topics mentioned above led me to consider anoth
 
 *Instead of eliminating or reducing complexity, we instead focus on rearraging, moving around, or "converting" the complexity*
 
+The key question then becomes how can you rearrange the complexity in such a way that it is beneficial to you?
+
 This might sound odd but I have considered some examples to illustrate
 
 ### Examples
 
 #### Refactoring Functionality into a Class
 We've all experienced code that was written without much planning. We can end up with functions strewn all over the place
-and interlinked, known affectionately as "spaghetti code". This might often be described by the maintainers as "complicated".
+and interlinked, known affectionately as "spaghetti code". This might often be described by the maintainers as "complicated";
+it's hard to understand, hard to debug, and hard to extend.
 
 Now suppose you roll your sleeves up and write a service class for all the code that's related. This makes it easier to use,
 easier to extend, easier to see the whole picture, and harder to make mistakes. Hooray - complexity reduced! Well, sort of.
@@ -125,7 +131,7 @@ Now this is artificially complex - there's a loop and random number generation w
 
     int ten = 10;
     
-So what gives? Surely we can do this simplification for free? Well, almost, but here we can argue that the complexity is
+So what gives? Surely we can do this simplification for "free"? Well, almost, but we can observe that the complexity is
 "converted" into cognitive load as you examine the complex code, figure out what it should be doing, and re-write it. In this case,
 the complexity is offset by the need to "do work", much like the CoE example. Obviously, this is an absurd example and
 no one in their right mind would argue that the small amount of effort to refactor this
