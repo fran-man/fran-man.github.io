@@ -8,7 +8,7 @@ categories: update welcome
 In my 9 years as a professional software engineer, I've been in many discussions, some technical, some not so technical,
 that are related to eliminating or reducing complexity. I'm sure many others will have been too.
 
-These discussions are interesting and often seem practically very useful, however, it can often seem that no matter
+These discussions are interesting and seem practically very useful, however, it can often seem that no matter
 how much you discuss and plan to reduce complexity, and how much refactoring, simplification etc. you do, that you still
 end up with an over-complicated system.
 
@@ -125,9 +125,18 @@ Now this is artificially complex - there's a loop and random number generation w
 
     int ten = 10;
     
-So what gives? Surely we can do this simplification for free? Well, almost, but one could argue that the complexity is
-"converted" into cognitive load as you examine the complex code, figure out what it should be doing, and re-write it.
-Obviously, this is an absurd example and no one in their right mind would argue that the small amount of effort to refactor this
+So what gives? Surely we can do this simplification for free? Well, almost, but here we can argue that the complexity is
+"converted" into cognitive load as you examine the complex code, figure out what it should be doing, and re-write it. In this case,
+the complexity is offset by the need to "do work", much like the CoE example. Obviously, this is an absurd example and
+no one in their right mind would argue that the small amount of effort to refactor this
 is not worth it. But still it is worth consideration as an illustrative example.
 
 ## Conclusion
+We began with an observation about the struggles of eliminating complexity from code and software systems. We then took
+a layman's view of the Physical concepts of Entropy and Conservation of Energy, to set the scene. We then discussed how
+we might lift some aspects of these concepts and lay them on top of software engineering, focusing on complexity reduction.
+Finally, we took a look at some examples to illustrate the point in a more understandable way.
+
+I hope this has been somewhat interesting and hopefully may promote further thoughts and discussions in your work.
+If you've found this useful or interesting, please share this idea with others. Further, if you have any comments or input,
+feel free to reach out to me at my twitter handle.
