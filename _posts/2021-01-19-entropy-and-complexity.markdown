@@ -47,8 +47,8 @@ there are many more ways to have a deck of cards shuffled in a random order than
 This then to some degree helps explain why shuffling a deck of cards will almost never result in putting the cards back in the right order.
 The shuffled deck of cards has more entropy than one in order.
 
-It should be noted that the model of entropy as being representative of disorder is now considered to be not entirely accurate.
-However to me, it remains a useful analogy for explain the basic idea.
+It should be noted that the model of entropy as being representative of disorder is now considered to be not entirely
+accurate. However to me, it remains a useful analogy for explaining the basic idea.
 
 #### Entropy Is Non-decreasing
 The important point that I want to make, is that in a closed system, entropy must always stay the same or increase.
@@ -66,7 +66,7 @@ This is an absolute rule and cannot be violated, hence why perpetual motion mach
 they worked, they would be generating energy from nothing.
 
 ## Application to Software Engineering
-OK, great. We've talked about entropy and CoE which are try physics concepts, which surely is nothing to do with working as a
+OK, great. We've talked about entropy and CoE which are dry physics concepts, which surely is nothing to do with working as a
 software engineer, right? These are totally unrelated fields after all.
 
 Maybe not, though. At the lowest level, computers are just moving subatomic particles (electrons) around. They also convert
@@ -114,7 +114,8 @@ yml - complexity gone!
 Well - again not really. The code you can *see* is a lot simpler. But really you've offloaded your complexity to spring boot.
 Spring boot is a *massive* project that I often hear people refer to as being too complex or "magic". So really, this
 activity was more a case of moving your complexity from somewhere you didn't want it (your own code) to somewhere you
-can tolerate it (the framework). Whether this is tolerable and worthwhile for you is a personal decision.
+can tolerate it (the framework). Whether this is tolerable and worthwhile for you is a personal decision that may differ
+based on the situation.
 
 #### Simplifying Some Deliberately Complex Code
 A thought occurred to me, "what about code that you deliberately inserted artificial complexity into?" such as:
