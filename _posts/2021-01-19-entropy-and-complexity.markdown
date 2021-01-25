@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Entropy As A Mental Model Of Complexity"
-date:   2021-01-19 21:00:25 +0000
+date:   2021-01-25 20:00:25 +0000
 categories: update
 ---
 ## Introduction
